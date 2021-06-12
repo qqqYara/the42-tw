@@ -1,0 +1,84 @@
+/* --------------------------------------------------------------------------
+ * >>> Footer Block :
+ * -------------------------------------------------------------------------- */
+
+.cookies-modal{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: $black;
+  color: $white;
+  z-index: 999;
+}
+
+.cookies-modal-body{
+  padding: 15px 0;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include lg-up{
+    padding: 20px 0;
+    justify-content: center;
+  }
+
+}
+
+.home-contact-link{
+  cursor: pointer;
+
+  span {
+    cursor: pointer;
+  }
+}
+
+.cookies-link{
+  margin-left: 10px;
+  font-weight: 700;
+  border-bottom: 1px solid $white;
+  cursor: pointer;
+  transition: $firstAnim;
+  font-size: 10px;
+
+  &:hover{
+    color: $orange;
+    border-color: $orange;
+  }
+
+  @include md-up{
+    font-size: 18px;
+  }
+}
+
+.cookies-title{
+  font-size: 20px;
+  font-weight: 700;
+  color: $white;
+  display: none;
+
+  @include lg-up{
+    display: block;
+  }
+}
+
+
+.cookies-close{
+  color: $white;
+  margin-left: 20px;
+  text-transform: uppercase;
+  background: transparent;
+  transition: $firstAnim;
+
+  font-size: 12px;
+
+  &:hover{
+    color: $orange;
+    border-color: $orange;
+  }
+
+  @include md-up{
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,45 @@
+/* --------------------------------------------------------------------------
+ * >>> Skeleton :
+ * -------------------------------------------------------------------------- */
+
+
+.section-inner{
+  padding-top: 155px;
+}
+
+
+.container{
+  max-width: 100%;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @include ml-up{
+    max-width: 425px;
+  }
+
+  @include sm-up{
+    max-width: 540px;
+  }
+
+  @include md-up{
+    max-width: 720px;
+  }
+
+  @include lg-up{
+    max-width: 960px;
+  }
+
+  @include ltl-up{
+    max-width: 1200px;
+  }
+
+}
+
+.container-nf{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}

@@ -1,0 +1,152 @@
+//---------------------------------------------------------------------------
+	>>> Home Page :
+	---------------------------------------------------------------------------
+extends ./template/main
+
+block variables
+	- let pageTitle = 'Home page';
+	- let padeDescription = pageTitle + ' description';
+
+block content
+	
+	section.home__firstscreen
+		.container
+			img.firstscreen-image(src="" alt="firstscreen-image")
+			.firstscreen-info
+				h1.firstscreen__title 
+					| A Revolution in Antibacterial, Antiviral Facial Cleaning
+				p.firstscreen__caption
+					| Manuka honey antibacterial properties that help protect and seal your skin
+				a.btn-bw
+					| Shop now
+	section.home__description
+		.container
+			.description-info
+				img.description__logo(src="" alt="logo")
+				p.description__caption
+					| is an innovative approach to beauty. Uncomplicated. Sophisticated. Declutter your daily skincare routine.
+			img.description-image(src="" alt="description-image")
+	section.home__buy-it-now
+		.container
+			.product-item
+				.product__title
+					| 3-in-1 Pads Exfoliate. Serum. Moisturize.
+				.product__reviews
+					span
+				.product__description
+					| Stabilized caffeine works hard to immediately stimulate collagen production in your skin, plus it provides a wake-you-up tightening effect.
+				.product_price
+					span.price-old $84.99
+					span.price-new $64.99
+				a.btn-bw
+					| Buy it now
+			img.description-image(src="" alt="buy-it-now-image")
+	section.home__case-show
+		.container
+			.case-show__caption
+				| Exfoliate.<br> Serum. <br>Moisturize.
+	section.home__how-to-use
+		.container
+			.how-to-use__title
+				| How to use CoffeeFace
+			.how-to-use__bg-text
+				| How to use
+			.how-to-use__information
+				.information-item
+					.information-icon
+						img.how-to-use__icon(src="" atl="Wash your face")
+					.information-text
+						| Wash your face
+				.information-item
+					.information-icon
+						img.how-to-use__icon(src="" atl="Apply on the skin")
+					.information-text
+						| Apply on the skin
+				.information-item
+					.information-icon
+						img.how-to-use__icon(src="" atl="Wait 5 minutes")
+					.information-text
+						| Wait 5 minutes
+	section.home__testimonials
+		.container
+			.testimonials_title
+				| Testimonials
+			.swiper-container#testimonials-swiper
+				.swiper-wrapper
+					.swiper-slide
+						img.testimonials__slide-image(src="" alt="slide-image")
+						.testimonials__slide-person_name
+							| Anna K.
+						.testimonials__slide-text
+							| The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it's seen all around the web; on templates, websites, and stock designs. Use our generator to get your own, or read on for the authoritative history of lorem ipsum.
+					.swiper-slide
+						img.testimonials__slide-image(src="" alt="slide-image")
+						.testimonials__slide-person_name
+							| Anna K.
+						.testimonials__slide-text
+							| The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it's seen all around the web; on templates, websites, and stock designs. Use our generator to get your own, or read on for the authoritative history of lorem ipsum.
+					.swiper-slide
+						img.testimonials__slide-image(src="" alt="slide-image")
+						.testimonials__slide-person_name
+							| Anna K.
+						.testimonials__slide-text
+							| The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it's seen all around the web; on templates, websites, and stock designs. Use our generator to get your own, or read on for the authoritative history of lorem ipsum.
+
+
+				.testimonials-swiper-next
+				.testimonials-swiper-prev
+	section.home__blog
+		.container
+			.blog__images
+				img.aloe-image(src="" alt="aloe-image")
+				img.cell-image(src="" alt="cell-image")
+			.blog__title
+				| Blog
+			.swiper-container#blog-swiper
+				.swiper-wrapper
+					.swiper-slide
+						.slide-image_wrapper
+							img.blog-swiper-image(src="" alt="blog-swiper-image")
+							.image-mask
+						.slide-description
+							| Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print
+					.swiper-slide
+						.slide-image_wrapper
+							img.blog-swiper-image(src="" alt="blog-swiper-image")
+							.image-mask
+						.slide-description
+							| Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print
+					.swiper-slide
+						.slide-image_wrapper
+							img.blog-swiper-image(src="" alt="blog-swiper-image")
+							.image-mask
+						.slide-description
+							| Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print
+	section.home__partners
+		.container
+			.swiper-container#partners-swiper
+				.swiper-wrapper
+					.swiper-slide
+						img.partners-image(src="" alt="")
+					.swiper-slide
+						img.partners-image(src="" alt="")
+					.swiper-slide
+						img.partners-image(src="" alt="")
+					.swiper-slide
+						img.partners-image(src="" alt="")
+	section.home__subscribe
+		.container
+			.subscribe__body
+				.subscribe__title
+				.subscribe__caption
+				form.subscribe__form
+					input(type="text" placeholder="Your email" required)
+					button(type="submit")
+	section.home__social
+		.container
+			.social__title
+				| @coffee_face
+			.swiper-container#social-swiper
+				.swiper-wrapper
+					.swiper-slide
+						img.partners-image(src="" alt="")
