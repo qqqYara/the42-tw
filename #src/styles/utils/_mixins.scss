@@ -9,6 +9,9 @@
     &:-ms-input-placeholder { @content; }
 }
 
+/* FONT FACE mixin */
+/* -------------------------------------------------------------------------- */
+
 @mixin font($font_name, $file_name, $weight, $style) {
     @font-face {
         font-family: $font_name;
@@ -28,7 +31,7 @@
         font-family: $font-family;
         font-weight: $weight;
         font-style: $style;
-        // font-display: swap;
+        font-display: swap;
         font-display: block;
 
         @if $asset-pipeline == true {
@@ -53,6 +56,8 @@
     }
 }
 
+/* fn max min */
+/* -------------------------------------------------------------------------- */
 
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});

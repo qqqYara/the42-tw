@@ -3,12 +3,28 @@
   ---------------------------------------------------------------------------
 
 header#site-header.site-header(role='banner')
-    .menu-toggle.wow.animation-menu-toggle
-        button.menu-toggle-button
-    .header-titles.wow.animation-header-titles
+    .shiping-info
+        p
+            | Free shipping over $100
+    .container
+        .menu-toggle
+            input.menu-toggle#menu-toggle
+            label.menu-toggle-btn.mobile-menu(for="menu-toggle")
         .site-logo
-            a.site-logo-link(href='/' rel='home')
-
-    ul#site-menu.site-menu(aria-label='навигация по сайту')
-        li
-            a(href='/') about
+            a.header-logo-link(href='/' rel='home')
+                img.header-logo-image(src="" alt="logo")
+        nav#site-menu.site-menu(aria-label='site navigation')           
+            ul
+                li
+                    a(href='/') Home
+                li
+                    a(href='/') Shop
+                li
+                    a(href='/') About
+                li
+                    a(href='/') What is Coffeeface
+                li
+                    a(href='/') Contact
+        .cart-btn
+            img.cart-icon(src="" alt="logo")
+                span.cart-counter

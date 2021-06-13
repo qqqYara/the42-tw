@@ -1,5 +1,6 @@
 /* --------------------------------------------------------------------------
  * >>> Font Weight :
+ * --------------------------------------------------------------------------
  * 100: Thin (Hairline)
  * 200: Extra Light (Ultra Light)
  * 300: Light
@@ -13,19 +14,23 @@
 
 /* Project Main Font */
 /* -------------------------------------------------------------------------- */
+  // body{
+  //   font-family: $mainFont;
+  // }
 
-body{
-  font-family: $mainFont;
-}
+/* Poppins */
+/* -------------------------------------------------------------------------- */
+  @include font-face(Poppins, Poppins/Poppins-ExtraLight, 200, normal, eot woff2 woff ttf svg);
+  @include font-face(Poppins, Poppins/Poppins-Light, 300, normal, eot woff2 woff ttf svg);
+  @include font-face(Poppins, Poppins/Poppins-Regular, 400, normal, eot woff2 woff ttf svg);
+  @include font-face(Poppins, Poppins/Poppins-Medium, 500, normal, eot woff2 woff ttf svg);
+
+/* Bellamy Signature */
+/* -------------------------------------------------------------------------- */
+  @include font-face(Bellamy Signature, Bellamy Signature/BellamySignature, 400, normal, eot woff2 woff ttf svg);
+
 
 /* Project Imported CDN Fonts */
-/* @include font-face(FontName, FontPath, 300, normal, eot woff2 woff ttf svg); */
 /* -------------------------------------------------------------------------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
-
-
-/* Project Fonts */
-/* -------------------------------------------------------------------------- */
-
+  // @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');

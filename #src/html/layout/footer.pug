@@ -2,4 +2,35 @@
   >>> Footer Block :
   ---------------------------------------------------------------------------
 
-//- footer#site-footer.site-footer(role='contentinfo')
+footer#site-footer.site-footer
+  .container
+    .footer__bg-image
+    .footer__main-content
+      a.footer-logo-link(href="/" rel='home')
+        img.footer-logo-image(src="" alt="logo")
+      nav#site-menu.site-menu.header-menu(aria-label='site navigation')
+        ul
+          li
+            a(href='/') Home
+          li
+            a(href='/') Shop
+          li
+            a(href='/') About
+          li
+            a(href='/') What is Coffeeface
+          li
+            a(href='/') Contact
+      .socila-links
+        a.link-item
+          img(src="" alt="facebook")
+        a.link-item
+          img(src="" alt="twitter")
+        a.link-item
+          img(src="" alt="instagram")
+
+
+    .footer__copyright
+      p
+        | © 2021, Coffeeface
+      p
+        | Test work by Yaroslav Mitiuk
