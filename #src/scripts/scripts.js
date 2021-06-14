@@ -115,6 +115,25 @@ $(window).scroll(function() {
     }
 });
 
+
+const $window   = $(window),
+      $addTo    = $('.site-menu');
+$window.resize(function resize() {
+    if ($window.width() > 767) {
+        return $addTo.addClass('mobile-menu');
+    }
+    $addTo.removeClass('mobile-menu');
+}).trigger('resize');
+
+// $window.resize(function resize() {
+//     if ($window.width() < 768) {
+//         return $addTo.addClass('artical_style_change');
+//     } 
+
+//     $addTo.removeClass('artical_style_change');
+// }).trigger('resize');
+
+
 // hide header END
 
 // $(document).ready(function () {

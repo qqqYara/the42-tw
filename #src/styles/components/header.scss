@@ -21,7 +21,10 @@
         height: 100px;
     }
 }
-
+.header-logo-link {
+    position: relative;
+    z-index: 10;
+}
 .header-logo-image {
     width: 122px;
 
@@ -52,10 +55,19 @@
 
 /* ------------------------- */
 .menu-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    z-index: 10;
     @include lg-up {
         display: none;
     }
+}
+#site-header .menu-toggle-iput ~ .menu-toggle-btn::before {
+    content: 'Menu';
+}
+#site-header .menu-toggle-iput:checked ~ .menu-toggle-btn::before {
+    content: 'Close';
 }
 .menu-toggle-input {
     display: none;
@@ -70,8 +82,21 @@
     @include lt-up {
         width: 665px;
     }
+}
 
-    // li {
-    //     margin-right: ;
-    // }
+.mobile-menu {
+    flex-direction: column;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    padding-top: 55px;
+    background-color: #fef6f3;
+    transition: all .5s ease;
+    opacity: 0;
+    z-index: 10;
+}
+#site-header .menu-toggle-iput:checked ~ .mobile-menu {
+    top: 0;
+    opacity: 1;
 }
