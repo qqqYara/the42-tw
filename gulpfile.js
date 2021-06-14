@@ -47,7 +47,7 @@ let path = {
         css: source_folder + "/styles/style.s+(a|c)ss",
         js: source_folder + "/scripts/*.js",
         img: source_folder + "/images/**/*.*",
-        fonts: source_folder + "/fonts/*.{ttf,woff,woff2}"
+        fonts: source_folder + "/fonts/**/*.{eot,ttf,woff,woff2}"
     },
     watch: {
         html: source_folder + "/html/**/*.pug",
@@ -78,14 +78,14 @@ function html() {
         }))
         .pipe(plumber.stop())
         .pipe(gulp.dest(path.build.html))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.reload({stream:true}))
 }
 
 /* Styles Task
  * ========================================================================= */
 
 function css() {
-    return src(path.src.css)
+    return gulp.src(path.src.css)
         .pipe(plumber())
         .pipe(
             scss({
@@ -104,7 +104,7 @@ function css() {
         }))
         .pipe(plumber.stop())
         .pipe(dest(path.build.css))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.reload({stream:true}))
 }
 
 /* JavaScript Task
@@ -127,7 +127,7 @@ function js() {
         }))
         .pipe(plumber.stop())
         .pipe(dest(path.build.js))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.reload({stream:true}))
 }
 
 /* Libraries Task
@@ -150,7 +150,7 @@ function scripts_libraries() {
         // .pipe(sourcemaps.write('./maps'))
         .pipe(rename('libraries.min.js'))
         .pipe(gulp.dest('dist/scripts/'))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.reload({stream:true}))
 }
 
 /* Images Task
@@ -162,7 +162,7 @@ function images() {
         //     progressive: true
         // }))
         .pipe(dest(path.build.img))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.reload({stream:true}))
 }
 
 /* Fonts Task
@@ -171,7 +171,7 @@ function images() {
 function fonts() {
     return src(path.src.fonts)
         .pipe(dest(path.build.fonts))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.reload({stream:true}))
 }
 
 /* Services Tasks
@@ -193,6 +193,7 @@ function watchFiles(params) {
     gulp.watch([path.watch.css], css).on('change', css)
     gulp.watch([path.watch.js], js).on('change', js)
     gulp.watch([path.watch.img], images).on('change', images)
+    // gulp.watch([path.watch.fonts], fonts).on('change', fonts)
 }
 
 function clean(params) {

@@ -353,12 +353,12 @@ textarea {
   text-shadow: none;
 }
 
-img {
-  width: 100%;
-  vertical-align: top;
-  max-width: 100%;
-  max-height: 100%;
-}
+// img {
+//   width: 100%;
+//   vertical-align: top;
+//   max-width: 100%;
+//   max-height: 100%;
+// }
 
 fieldset {
   border: 0;
@@ -405,17 +405,9 @@ body {
 body {
   margin: 0;
   padding: 0;
-  color: #000;
-  letter-spacing: 0;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5em;
   outline: none;
   min-width: 280px;
   min-height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   overflow-x: hidden;
 }
 

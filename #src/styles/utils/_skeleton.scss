@@ -2,11 +2,14 @@
  * >>> Skeleton :
  * -------------------------------------------------------------------------- */
 body {
-  box-sizing: brorder-box;
+  font-family: $mainFont;
+  box-sizing: border-box;
 }
 
 .container{
   position: relative;
+  display: flex;
+  flex-direction: column;
   max-width: 100%;
   width: 100%;
   padding: 0 15px;
@@ -15,11 +18,12 @@ body {
   @include md-up {
     max-width: 720px;
   }
-
   @include lt-up {
-    max-width: 980px;
+    max-width: 100%;
   }
-
+  @include ltm-up {
+    max-width: 1180px;
+  }
   @include ltl-up {
     max-width: 1320px;
   }

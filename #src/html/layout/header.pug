@@ -3,18 +3,16 @@
   ---------------------------------------------------------------------------
 
 header#site-header.site-header(role='banner')
-    .shiping-info
-        p
-            | Free shipping over $100
+    p.shiping-info
+        | Free shipping over $100
     .container
         .menu-toggle
-            input.menu-toggle#menu-toggle
+            input.menu-toggle-iput#menu-toggle(type="checkbox")
             label.menu-toggle-btn.mobile-menu(for="menu-toggle")
-        .site-logo
-            a.header-logo-link(href='/' rel='home')
-                img.header-logo-image(src="" alt="logo")
-        nav#site-menu.site-menu(aria-label='site navigation')           
-            ul
+        a.header-logo-link(href='/' rel='home')
+            img.header-logo-image(src="/images/site-logo.svg" alt="logo")
+        nav
+            ul#site-menu.site-menu.header-menu(aria-label='site navigation')
                 li
                     a(href='/') Home
                 li
@@ -26,5 +24,5 @@ header#site-header.site-header(role='banner')
                 li
                     a(href='/') Contact
         .cart-btn
-            img.cart-icon(src="" alt="logo")
-                span.cart-counter
+            img.cart-icon(src="" alt="cart-button")
+            span.cart-counter
