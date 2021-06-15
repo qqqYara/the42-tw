@@ -6,22 +6,22 @@ header#site-header.site-header(role='banner')
     p.shiping-info
         | Free shipping over $100
     .container
-        input.menu-toggle-iput#menu-toggle(type="checkbox")        
+        input.menu-toggle-input#menu-toggle(type="checkbox")        
         label.menu-toggle.menu-toggle-btn(for="menu-toggle")
         a.header-logo-link(href='/' rel='home')
             img.header-logo-image(src="/images/site-logo.svg" alt="logo")
-        nav#site-menu.site-menu.header-menu(aria-label='site navigation')
-            ul
-                li
-                    a(href='/') Home
-                li
-                    a(href='/') Shop
-                li
-                    a(href='/') About
-                li
-                    a(href='/') What is Coffeeface
-                li
-                    a(href='/') Contact
+        
+        ul#site-menu.site-menu.header-menu(aria-label='site navigation')
+            li
+                a(href='/') Home
+            li
+                a(href='/') Shop
+            li
+                a(href='/') About
+            li
+                a(href='/') What is Coffeeface
+            li
+                a(href='/') Contact
         .cart-btn
-            img.cart-icon(src="" alt="cart-button")
+            img.cart-icon(src="/images/icons/cart.svg" alt="cart-button")
             span.cart-counter

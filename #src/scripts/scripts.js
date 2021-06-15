@@ -75,64 +75,60 @@ let app = {
 }
 
 
-// hide header
+// hide header and menu
+$(document).ready(function () {
+    const menu = document.getElementById("site-header");
 
-const menu = document.getElementById("site-header");
+    let last_known_scroll_position = 0;
+    let direction = 0;
+    let ticking = false;
 
-let last_known_scroll_position = 0;
-let direction = 0;
-let ticking = false;
+    function hideElem(direction) {
+      if (direction < 0) {
+        menu.classList.add('hide-header');
+      }
+      else {
+        menu.classList.remove('hide-header');
+      }
+    }
 
-function hideElem(direction) {
-  if (direction < 0) {
-    menu.classList.add('hide-header');
-  }
-  else {
-    menu.classList.remove('hide-header');
-  }
-}
+    window.addEventListener("scroll", (e) => { 
+      direction = last_known_scroll_position - window.scrollY; 
+      last_known_scroll_position = window.scrollY;
 
-window.addEventListener("scroll", (e) => { 
-  direction = last_known_scroll_position - window.scrollY; 
-  last_known_scroll_position = window.scrollY;
-
-  if (!ticking) {
-    window.requestAnimationFrame(function() {
-      hideElem(direction);
-      ticking = false;
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          hideElem(direction);
+          ticking = false;
+        });    
+        ticking = true;
+      }
     });
-    
-    ticking = true;
-  }
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 138){  
+            $('.site-header').css({'backgroundColor' : '#fef6f3'});
+        }
+        else{
+            $('.site-header').css({'backgroundColor' : 'transparent'});
+        }
+    });
+
+
+
+    const $window   = $(window),
+          $addTo    = $('.site-menu');
+    $window.resize(function resize() {
+        if ($window.width() < 769) {
+            return $addTo.addClass('mobile-menu');
+        }
+        $addTo.removeClass('mobile-menu');
+    }).trigger('resize');
+
+    $('.menu-toggle').on('click', function(){
+        $('#body').toggleClass('body-overflow');
+    });
 });
-
-$(window).scroll(function() {
-    if ($(this).scrollTop() > 138){  
-        $('.site-header').css({'backgroundColor' : '#FAB298'});
-    }
-    else{
-        $('.site-header').css({'backgroundColor' : 'transparent'});
-    }
-});
-
-
-const $window   = $(window),
-      $addTo    = $('.site-menu');
-$window.resize(function resize() {
-    if ($window.width() > 767) {
-        return $addTo.addClass('mobile-menu');
-    }
-    $addTo.removeClass('mobile-menu');
-}).trigger('resize');
-
-// $window.resize(function resize() {
-//     if ($window.width() < 768) {
-//         return $addTo.addClass('artical_style_change');
-//     } 
-
-//     $addTo.removeClass('artical_style_change');
-// }).trigger('resize');
-
 
 // hide header END
 

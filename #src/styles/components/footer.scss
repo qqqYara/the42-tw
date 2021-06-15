@@ -2,3 +2,31 @@
  * >>> Footer Block :
  * -------------------------------------------------------------------------- */
 
+.site-footer {
+    background: #000000;
+    height: auto;
+    padding: 20px 0 15px;
+
+    @include md-up {
+        height: 310px;
+        padding: 40px 0 20px;
+    }
+}
+.footer__main-content {
+    display: flex;
+}
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 115px;
+    a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 240%;
+        /* or 38px */
+
+
+        color: #FFFFFF;
+    }
+}

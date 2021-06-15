@@ -5,7 +5,9 @@ body {
   font-family: $mainFont;
   box-sizing: border-box;
 }
-
+.body-overflow {
+  overflow: hidden;
+}
 .container{
   position: relative;
   display: flex;
