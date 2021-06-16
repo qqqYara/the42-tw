@@ -8,25 +8,115 @@
     padding: 20px 0 15px;
 
     @include md-up {
-        height: 310px;
         padding: 40px 0 20px;
+    }
+    @include lg-up {
+        height: 310px;
     }
 }
 .footer__main-content {
+    position: relative;
     display: flex;
+    margin-bottom: 40px;
+    flex-direction: column;
+
+    @include md-up {
+
+    }
+    @include lg-up {
+        flex-direction: row;
+    }
 }
 .footer-menu {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: 115px;
+    max-width: 500px;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0;
+
+    @include md-up {
+        max-height: 115px;       
+        margin-top: 0;
+    }
+    @include lg-up {
+        margin-left: 100px;        
+    }
+    @include ltm-up {
+        margin-left: 380px;
+    }
     a {
         font-weight: 400;
         font-size: 16px;
         line-height: 240%;
-        /* or 38px */
+        color: #FFFFFF;
+        transition: all .5s ease;
+        cursor: pointer;
+        &:hover {
+            color: #8A5137;
+        }
+    }
+}
+.socila-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 110px;
+    display: flex;
+    justify-content: space-between;
 
+    @include md-up {
+        width: 150px;
+    }
+    svg {
+        cursor: pointer;
+    }
+    svg .path-item {
+        transition: all .5s ease;
+    }
+    svg:hover .path-item {
+        fill: #8A5137;
+    }
+}
+.payment-methods {
+    display: flex;
+    justify-content: flex-start;
+    height: 22px;
+    margin-bottom: 30px;
+    @include md-up {
+        justify-content: flex-end;        
+    }
+    .method-item {
+        margin-right: 18px;
+        cursor: pointer;
+        img {
+            filter: grayscale(1);
+            transition: all .5s ease;
+        }
+        &:hover img {
+            filter: grayscale(0);
+        }
+        &:last-child {            
+            margin-right: 0;
+        }
+    }
+}
+.footer__copyright {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #FFFFFF;
+    padding-top: 15px;
+    opacity: .4;
 
+    @include md-up {
+        padding-top: 20px;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 18px;
         color: #FFFFFF;
     }
 }
