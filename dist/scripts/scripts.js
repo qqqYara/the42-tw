@@ -49,7 +49,16 @@ $(document).ready(function () {
 
     $('.menu-toggle').on('click', function(){
         $('#body').toggleClass('body-overflow');
+        // $('.menu-toggle-input').prop( "checked", true );
     });
+
+
+    // function closeMenu(){
+    //   $('.menu-toggle-input').prop( "checked", false );
+    // }
+    // $(document.body).click( function() {
+    //      closeMenu();
+    // });
 // header and menu options END
 
 });
